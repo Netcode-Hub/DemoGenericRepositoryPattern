@@ -53,6 +53,7 @@ namespace DemoGenericRepositoryPattern.Controllers
             return NoContent();
         }
 
+        // delete
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
