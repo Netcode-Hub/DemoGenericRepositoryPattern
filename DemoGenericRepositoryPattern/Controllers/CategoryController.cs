@@ -15,7 +15,7 @@ namespace DemoGenericRepositoryPattern.Controllers
         {
             _categoryRepository = categoryRepository;
         }
-
+        // Get all
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -23,6 +23,7 @@ namespace DemoGenericRepositoryPattern.Controllers
             return Ok(categories);
         }
 
+        // Get by Id
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -32,6 +33,7 @@ namespace DemoGenericRepositoryPattern.Controllers
             return Ok(category);
         }
 
+        // create
         [HttpPost]
         public async Task<IActionResult> Create(Category category)
         {
@@ -39,6 +41,7 @@ namespace DemoGenericRepositoryPattern.Controllers
             return CreatedAtAction(nameof(GetById), new { id = category.Id }, category);
         }
 
+        // update
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, Category category)
         {
@@ -49,6 +52,7 @@ namespace DemoGenericRepositoryPattern.Controllers
             return NoContent();
         }
 
+        // Delete
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
