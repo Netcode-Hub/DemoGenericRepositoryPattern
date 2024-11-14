@@ -1,0 +1,4 @@
+@address = https://localhost:7278
+
+GET http://localhost:5159/weatherforecast
+
