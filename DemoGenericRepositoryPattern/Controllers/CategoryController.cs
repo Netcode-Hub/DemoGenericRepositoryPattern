@@ -33,7 +33,7 @@ namespace DemoGenericRepositoryPattern.Controllers
             return Ok(category);
         }
 
-        // update
+        // create
         [HttpPost]
         public async Task<IActionResult> Create(Category category)
         {
@@ -41,6 +41,7 @@ namespace DemoGenericRepositoryPattern.Controllers
             return CreatedAtAction(nameof(GetById), new { id = category.Id }, category);
         }
 
+        // update
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, Category category)
         {
@@ -51,6 +52,7 @@ namespace DemoGenericRepositoryPattern.Controllers
             return NoContent();
         }
 
+        // Delete
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
