@@ -16,6 +16,7 @@ namespace DemoGenericRepositoryPattern.Controllers
             _productRepository = productRepository;
         }
 
+        // Get
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
