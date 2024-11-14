@@ -16,6 +16,7 @@ namespace DemoGenericRepositoryPattern.Controllers
             _brandRepository = brandRepository;
         }
 
+        // Comments updated
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
